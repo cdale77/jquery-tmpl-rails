@@ -9,7 +9,7 @@ module JqueryTmplRails
       next unless app.assets
       #app.assets.register_engine(".tmpl", JqueryTemplate)
       app.assets.configure do |env|
-        env.register_mime_type "text/tmpl", extensions: %w(.tmpl)
+        env.register_mime_type "application/javascript", extensions: %w(.tmpl)
         env.register_transformer "text/tmpl", "text/html", JqueryTemplate
       end
     end
