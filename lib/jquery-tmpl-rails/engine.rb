@@ -5,7 +5,7 @@ module JqueryTmplRails
     config.jquery_templates = ActiveSupport::OrderedOptions.new
     config.jquery_templates.prefix = ""
 
-    initializer "sprockets.jquery_templates", :after => "sprockets.environment", :group => :all do |app|
+    initializer "sprockets.jquery_templates", :group => :all do |app|
       next unless app.assets
       #app.assets.register_engine(".tmpl", JqueryTemplate)
       app.config.assets.configure do |env|
